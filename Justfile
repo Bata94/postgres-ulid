@@ -2,7 +2,7 @@ export BINARY_NAME := "postgres-ulid"
 export MAJOR_VERSION := "16"
 export MINOR_VERSION := "4"
 export PATCH_VERSION := "0"
-export VERSION := "$(MAJOR_VERSION).$(MINOR_VERSION).$(PATCH_VERSION)"
+export VERSION := "$MAJOR_VERSION.$MINOR_VERSION.$PATCH_VERSION"
 export DOCKER_REGISTRY := "ghcr.io/bata94/"
 
 build:
@@ -10,8 +10,8 @@ build:
 
 release-git:
 	git add ./Justfile
-	git commit -m "Release version $(VERSION)"
-	git tag -a $VERSION -m "Release version $(VERSION)"
+	git commit -m "Release version $VERSION"
+	git tag -a $VERSION -m "Release version $VERSION"
 	git push
 	git push --tags
 
