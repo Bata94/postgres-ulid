@@ -1,4 +1,4 @@
-FROM postgres:16 AS pg
+FROM postgres:16.4 AS pg
 
 WORKDIR /root
 
